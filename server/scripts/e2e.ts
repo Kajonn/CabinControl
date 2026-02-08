@@ -39,8 +39,8 @@ async function waitForServer(url: string) {
 }
 
 async function run() {
-  const mock = spawnProcess("node", ["--loader", "tsx", "scripts/mock-ha.ts"]);
-  const server = spawnProcess("node", ["--loader", "tsx", "src/index.ts"]);
+  const mock = spawnProcess("node", ["--import", "tsx", "scripts/mock-ha.ts"]);
+  const server = spawnProcess("node", ["--import", "tsx", "src/index.ts"]);
 
   try {
     await waitForServer("http://localhost:8085/api/health");
