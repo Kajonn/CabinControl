@@ -1,0 +1,31 @@
+{
+  "name": "cabincontrol-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint . --ext .ts",
+    "test:e2e": "tsx scripts/e2e.ts",
+    "mock-ha": "tsx scripts/mock-ha.ts"
+  },
+  "dependencies": {
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "express-rate-limit": "7.2.0",
+    "jose": "5.2.4",
+    "node-fetch": "3.3.2",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.21",
+    "@types/node": "20.12.12",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "typescript": "5.4.5",
+    "tsx": "4.12.0"
+  }
+}
